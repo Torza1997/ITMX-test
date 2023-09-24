@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productImage": "test",
+      "productName": "ไข่ตุ๋น",
+      "productPrice": 100
+    },
+    {
+      "id": 2,
+      "productImage": "test2",
+      "productName": "ผัดวุ้นเส้น",
+      "productPrice": 100
+    },
+    {
+      "id": 3,
+      "productImage": "test3",
+      "productName": "ไข่ดองน้ำปลา",
+      "productPrice": 100
+    },
+    {
+      "id": 4,
+      "productImage": "test4",
+      "productName": "ผัดฟักทอง",
+      "productPrice": 100
+    }
+  ]
+}
