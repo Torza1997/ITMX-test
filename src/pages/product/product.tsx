@@ -1,7 +1,7 @@
 import React, { FunctionComponent, PropsWithChildren } from "react";
 import useSWR from "swr";
 import { UseProductList } from "@/stores/product-list/UseProductList";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import ProductCard from "@/components/common/product-card";
 import Loading from "@/components/common/loading";
 interface ProductPageProps {
@@ -23,25 +23,22 @@ const ProductPage: FunctionComponent<
   if (isLoading) return <Loading />;
 
   return (
-    <Box>
-      <Grid container spacing={1}>
-        {productList.map((product) => {
-          return (
-            <Grid
-              item
-              xs={12}
-              md={4}
-              lg={3}
-              key={`${product?.productName}${product?.id}`}
-            >
-              <Box display={"flex"} justifyContent={"center"}>
-                <ProductCard data={product} />
-              </Box>
-            </Grid>
-          );
-        })}
-      </Grid>
-    </Box>
+    <Grid container spacing={1}>
+      {productList.map((product) => {
+        return (
+          <Grid
+            sx={{ minWidth: "fit-content" }}
+            item
+            xs={12}
+            md={4}
+            lg={3}
+            key={`${product?.productName}${product?.id}`}
+          >
+            <ProductCard data={product} />
+          </Grid>
+        );
+      })}
+    </Grid>
   );
 };
 

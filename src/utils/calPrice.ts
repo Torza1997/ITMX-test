@@ -1,3 +1,3 @@
 export const calPrice = () => {
-  return;
+  return 0;
 };

@@ -9,7 +9,6 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import { Column } from "@/types/table/columType";
 import { ProductType } from "@/types/product-list/productType";
-import { Box } from "@mui/material";
 import { isUndefined } from "lodash";
 
 interface ProductTableProps {

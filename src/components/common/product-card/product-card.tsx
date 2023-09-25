@@ -53,7 +53,6 @@ const ProductCard = ({ data }: PropsWithChildren<ProductCardProps>) => {
       >
         <Stack
           sx={{
-            height: "100%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
