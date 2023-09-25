@@ -13,11 +13,24 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import defaultProfile from "@/assets/static/images/avatar/me_to.jpg";
+import { useNavigate } from "react-router-dom";
 
-const pages = ["สินค้า", "จัดการสินค้า"];
+const pages = [
+  {
+    id: 1,
+    title: "สินค้า",
+    path: "/",
+  },
+  {
+    id: 2,
+    title: "จัดการสินค้า",
+    path: "/product-management",
+  },
+];
 const settings = ["โปรไฟล์", "ล็อคเอาท์"];
 
 function ResponsiveAppBar() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -32,8 +45,9 @@ function ResponsiveAppBar() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (path?: string) => {
     setAnchorElNav(null);
+    navigate(path ?? "/");
   };
 
   const handleCloseUserMenu = () => {
@@ -58,7 +72,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            onClick={() => navigate("/")}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -96,14 +110,21 @@ function ResponsiveAppBar() {
                 horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              onClose={() => {
+                handleCloseNavMenu;
+              }}
               sx={{
                 display: { xs: "block", md: "none" },
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  key={`${page?.title}-${page?.id}`}
+                  onClick={() => {
+                    handleCloseNavMenu(page?.path);
+                  }}
+                >
+                  <Typography textAlign="center">{page?.title}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -130,11 +151,13 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={`${page?.title}-${page?.id}`}
+                onClick={() => {
+                  handleCloseNavMenu(page?.path);
+                }}
                 sx={{ color: "#000", display: "block" }}
               >
-                {page}
+                {page?.title}
               </Button>
             ))}
           </Box>

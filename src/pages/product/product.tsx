@@ -3,6 +3,7 @@ import useSWR from "swr";
 import { UseProductList } from "@/stores/product-list/UseProductList";
 import { Box, Grid } from "@mui/material";
 import ProductCard from "@/components/common/product-card";
+import Loading from "@/components/common/loading";
 interface ProductPageProps {
   children?: React.ReactNode;
   /* Define your other props here */
@@ -19,7 +20,7 @@ const ProductPage: FunctionComponent<
     revalidateOnReconnect: false,
   });
 
-  if (isLoading) return <>loading...</>;
+  if (isLoading) return <Loading />;
 
   return (
     <Box>

@@ -34,6 +34,16 @@ const Router = () => {
                 ></RootComponent>
               ),
             },
+            {
+              path: "/product-detail/:id",
+              element: (
+                <RootComponent
+                  title="product detail"
+                  header={<AppBar />}
+                  loader={lazy(() => import("@/pages/product-detail"))}
+                ></RootComponent>
+              ),
+            },
           ],
         },
       ]),

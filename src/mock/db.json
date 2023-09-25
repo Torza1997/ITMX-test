@@ -2,27 +2,47 @@
   "products": [
     {
       "id": 1,
-      "productImage": "test",
+      "productImage": "/src/assets/static/images/avatar/me_to.jpg",
       "productName": "ไข่ตุ๋น",
-      "productPrice": 100
+      "productDescription": "อร่อยมากเลยครับ",
+      "productDetail": "รวมสูตรอาหารไทยไว้ถึง 70 สูตร ที่ผ่านการทำจริงทุกเมนู ครบรสกับข้าวและอาหารจานเดียวทั้ง ต้ม แกง ผัด ตุ๋น ทอด ไม่ว่าจะเป็น กระทงทอง กระเพาะปลาน้ำแดง รวมสูตรอาหารไทยไว้ถึง 70 สูตร ที่ผ่านการทำจริงทุกเมนู ครบรสกับข้าวและอาหารจานเดียวทั้ง ต้ม แกง ผัด ตุ๋น ทอด ไม่ว่าจะเป็น กระทงทอง กระเพาะปลาน้ำแดง",
+      "productPrice": 59,
+      "star": 4.5,
+      "reviewer": 10,
+      "calories": 100
     },
     {
       "id": 2,
-      "productImage": "test2",
+      "productImage": "/src/assets/static/images/avatar/me_to.jpg",
       "productName": "ผัดวุ้นเส้น",
-      "productPrice": 100
+      "productDescription": "อร่อยมากเลยครับ",
+      "productDetail": "รวมสูตรอาหารไทยไว้ถึง 70 สูตร ที่ผ่านการทำจริงทุกเมนู ครบรสกับข้าวและอาหารจานเดียวทั้ง ต้ม แกง ผัด ตุ๋น ทอด ไม่ว่าจะเป็น กระทงทอง กระเพาะปลาน้ำแดง",
+      "productPrice": 69,
+      "star": 4.3,
+      "reviewer": 14,
+      "calories": 100
     },
     {
       "id": 3,
-      "productImage": "test3",
+      "productImage": "/src/assets/static/images/avatar/me_to.jpg",
       "productName": "ไข่ดองน้ำปลา",
-      "productPrice": 100
+      "productDescription": "อร่อยมากเลยครับ",
+      "productDetail": "รวมสูตรอาหารไทยไว้ถึง 70 สูตร ที่ผ่านการทำจริงทุกเมนู ครบรสกับข้าวและอาหารจานเดียวทั้ง ต้ม แกง ผัด ตุ๋น ทอด ไม่ว่าจะเป็น กระทงทอง กระเพาะปลาน้ำแดง",
+      "productPrice": 79,
+      "star": 3.9,
+      "reviewer": 17,
+      "calories": 100
     },
     {
       "id": 4,
-      "productImage": "test4",
+      "productImage": "/src/assets/static/images/avatar/me_to.jpg",
       "productName": "ผัดฟักทอง",
-      "productPrice": 100
+      "productDescription": "อร่อยมากเลยครับ",
+      "productDetail": "รวมสูตรอาหารไทยไว้ถึง 70 สูตร ที่ผ่านการทำจริงทุกเมนู ครบรสกับข้าวและอาหารจานเดียวทั้ง ต้ม แกง ผัด ตุ๋น ทอด ไม่ว่าจะเป็น กระทงทอง กระเพาะปลาน้ำแดง",
+      "productPrice": 89,
+      "star": 4.7,
+      "reviewer": 100,
+      "calories": 100
     }
   ]
 }

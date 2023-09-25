@@ -42,7 +42,8 @@ const RootComponent = ({
           <Box
             sx={{
               maxWidth: "1980px",
-              padding: 10,
+              paddingY: 10,
+              paddingX: { xs: 3, md: 10 },
             }}
           >
             <ElementLoader />

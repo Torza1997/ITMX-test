@@ -1,17 +1,22 @@
-import React, { PropsWithChildren } from "react";
+import { Box, CircularProgress } from "@mui/material";
 
-interface LoadingProps {
-  children?: React.ReactNode;
-  /* Define your other props here */
-}
-
-const Loading = ({ children }: PropsWithChildren<LoadingProps>) => {
+const Loading = () => {
   return (
-    <div>
-      <h1>Loading</h1>
-      <p>This is a Loading loader.</p>
-      <div>{children}</div>
-    </div>
+    <Box
+      sx={{
+        position: "absolute",
+        left: 0,
+        top: 0,
+        width: "100vw",
+        height: "100vh",
+        bgcolor: "transparent",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <CircularProgress sx={{ color: "#2dfd7d" }} />
+    </Box>
   );
 };
 

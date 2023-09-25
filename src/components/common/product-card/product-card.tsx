@@ -1,8 +1,8 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React, { PropsWithChildren } from "react";
-import defaultImage from "@/assets/static/images/avatar/me_to.jpg";
 import { ProductType } from "@/types/product-list/productType";
 import StarIcon from "@mui/icons-material/Star";
+import { useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
   children?: React.ReactNode;
@@ -11,6 +11,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ data }: PropsWithChildren<ProductCardProps>) => {
+  const navigator = useNavigate();
   return (
     <Box
       sx={{
@@ -26,7 +27,7 @@ const ProductCard = ({ data }: PropsWithChildren<ProductCardProps>) => {
           position: "relative",
           width: 200,
           height: 150,
-          backgroundImage: `url(${defaultImage})`,
+          backgroundImage: `url(${data?.productImage})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -67,12 +68,17 @@ const ProductCard = ({ data }: PropsWithChildren<ProductCardProps>) => {
                 fontSize: 20,
                 lineHeight: 0.5,
               }}
-            >{`อร่อยมากเลยครับ`}</Typography>
+            >
+              {data?.productDescription}
+            </Typography>
           </Box>
 
           <Stack direction={"row"} alignItems={"center"}>
             <StarIcon sx={{ color: "#ffc400", width: 20 }} />
-            <Typography fontSize={20}>{4.3}</Typography>
+            <Typography fontSize={20}>
+              {data?.star}
+              <span style={{ color: "gray" }}> ({data?.reviewer})</span>
+            </Typography>
           </Stack>
           <Stack direction={"row"} justifyContent={"space-between"}>
             <Box
@@ -89,6 +95,9 @@ const ProductCard = ({ data }: PropsWithChildren<ProductCardProps>) => {
             <Button
               variant="contained"
               size="small"
+              onClick={() => {
+                navigator(`/product-detail/${data?.id}`);
+              }}
               sx={{
                 height: 30,
                 borderRadius: 3,
