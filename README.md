@@ -29,7 +29,7 @@ If you are developing a production application, we recommend updating the config
 run app step
 
 1. yarn dev
-2. open new tab
-3. yarn server
+2. open new terminal tab
+3. node server.js
 
 node js version => v18.17.0
