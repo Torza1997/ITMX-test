@@ -3,7 +3,7 @@ import jsonServer from "json-server";
 const server = jsonServer.create();
 const router = jsonServer.router("./src/mock/db.json");
 const middlewares = jsonServer.defaults({
-  noCors: true,
+  noCors: false,
 });
 
 server.use(middlewares);
