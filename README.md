@@ -30,7 +30,8 @@ run app step
 
 1. yarn dev
 2. open new terminal tab
-3. node server.js
+3. select run command "yarn server" OR" node server.js"
 
 node js version => v18.17.0
-*note=> if error can't find package json-server package => yarn add json-server
+
+note=> if error can't find package json-server package => yarn add json-server
