@@ -1,0 +1,5 @@
+C:\Users\ASUS\AppData\Roaming\npm
+├── hygen@6.2.11
+├── npm@9.8.1
+└── yarn@1.22.19
+

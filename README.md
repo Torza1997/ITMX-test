@@ -33,3 +33,4 @@ run app step
 3. node server.js
 
 node js version => v18.17.0
+*note=> if error can't find package json-server package => yarn add json-server
